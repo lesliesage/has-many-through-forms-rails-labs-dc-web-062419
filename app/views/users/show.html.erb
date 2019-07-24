@@ -1,1 +1,6 @@
+<h1><%= "Posts commented on by #{@user.username}" %></h1>
 
+<h3>Posts: </h3>
+<% @user.posts.uniq.each do |post| %>
+  <li><%= link_to(post.title, post) %></li>
+<% end %>
